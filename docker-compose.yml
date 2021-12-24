@@ -1,0 +1,35 @@
+version: '3.0'
+
+services:
+  nginx:
+    build:
+      context: ./docker/nginx
+    volumes:
+      - ./app:/prof
+    container_name: ${PROJECT_NAME}-nginx
+    restart: always
+    ports:
+      - "8082:80"
+
+  php-fpm:
+    build:
+      context: ./docker/php-fpm
+    volumes:
+      - ./app:/prof
+    container_name: ${PROJECT_NAME}-php-fpm
+    depends_on:
+      - firebird
+
+  firebird:
+    container_name: ${PROJECT_NAME}-firebird
+    image: itherz/firebird3
+    volumes:
+      - ./db:/var/db
+    ports:
+      - "3050:3050"
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 256M

@@ -1,0 +1,143 @@
+body, td, p {
+        font-family: tahoma, arial, helvetica, sans-serif;
+        font-size: 11px;
+        fontsize: 11px;
+}
+
+a:hover {
+        text-decoration: none;
+}
+
+.sm1, input, select {
+        font-size: 11px;
+        fontsize: 11px;
+}
+
+.ti {
+        font-size: 10px;
+        fontsize: 11px;
+        line-height: 16px;
+}
+
+a.p_header {
+        text-decoration: none;
+}
+
+
+.cat {
+        font-size: 10px;
+        fontsize: 11px;
+        text-decoration: none;
+}
+
+a.cat:hover {
+        text-decoration: underline;
+}
+
+.header {
+        font-size: 13px;
+        fontsize: 13px;
+}
+
+img        { border:0px }
+
+.tov_header {
+    font-size: 16px;
+    fontsize: 16px;
+    font-weight: bold;
+}
+
+.submenu{
+        margin-bottom: 0.5em;
+}
+
+.tbl 
+{
+    border: 1px solid #666666;
+}
+.tbl td
+{
+    border: 1px solid #666666;
+    padding:1px;
+}
+
+.trg
+{
+background-color: #DDDDDD;  
+text-align: right;  
+}
+
+.trw
+{
+background-color: #FFFFFF;  
+text-align: right;  
+}
+
+.tdn { text-align: left; }
+
+.tbh_r
+{
+    font-weight: bold;
+    background-color: #AAAAAA;  
+    color: #FF0000;
+    text-align: right;
+}
+
+#tbh
+{
+    font-weight: bold;
+    background-color: #AAAAAA;  
+    color: #000000;
+    text-align: center;
+    width: 30%;
+}
+.tbh_g
+{
+    font-weight: bold;
+    background-color: #AAAAAA;  
+    color: #005500;
+    text-align: right;
+}
+
+.addbl  
+{  
+    width: 308px;  
+    height: 483px;
+    margin: 2px;  
+    float: left;
+    text-align: left;  
+    border: 1px solid #AAAAAA;
+    padding: 3px;
+    position: relative;
+}  
+
+#addblr { text-align: right; }  
+
+.sel1 {
+    width: 100%;  
+    min-height: 25px;
+    margin: 5px 0px 0px 20px;  
+}
+
+.subm {
+    width: 287px;
+    text-align: right;  
+    background-color:;  
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+td.field {color: #000000}
+td.fieldred {color: #AA0000}
+
+
+#middle  
+{  
+    margin: 0px 0px 0px 0px;  
+    background-color:#ffffff;  
+    text-align: left;  
+    width: 960px;
+}  
