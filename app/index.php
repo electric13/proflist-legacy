@@ -1110,18 +1110,21 @@
 
 		// сначала метраж 
 		echo "<h4>Остатки сырья в рулонах</h4>";
-		$que_rmn = "select m.id, m.color, r2.remains from remains2 r2 ".
+		$que_rmn = "select m.id, m.color, r2.remains, sum(r.amount) from remains2 r2 ".
 			   "join materials m on m.id = r2.mat_id ".
-			   "where r2.remains > 0 order by m.color";
+			   "left join remains r on r.nom_id = m.nom_id ".
+			   "where r2.remains > 0 ".
+			   "group by m.id, m.color, r2.remains ".
+			   "order by m.color";
 
 		$sth = ibase_query($dbh, $que_rmn);
 ?>
 <table cellspacing="3" cellpadding="3" border="0" width=350px>
-<tr><td width=75%>Наименование</td><td>Остаток, м</td></tr>
+<tr><td width=75%>Наименование</td><td>Остаток, м</td><td>Остаток, тонн</td></tr>
 <?php
 
 		while ($row = ibase_fetch_row ($sth)) {
-		    echo "<tr><td>{$row[1]}</td><td>{$row[2]}</td></tr>";
+		    echo "<tr><td>{$row[1]}</td><td>{$row[2]}</td><td align=right>".money_format('%.2n',$row[3]/1000)."</td></tr>";
 		}
 ?>
 </table><br>
